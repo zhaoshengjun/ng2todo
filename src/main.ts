@@ -1,9 +1,9 @@
 import { bootstrap } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
-import { TodoAppComponent, environment } from './app/';
+import { TodoApp, environment } from './app/';
 
 if (environment.production) {
   enableProdMode();
 }
 
-bootstrap(TodoAppComponent);
+bootstrap(TodoApp);
