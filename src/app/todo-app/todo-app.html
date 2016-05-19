@@ -1,3 +1,21 @@
-<h1>
-  {{title}}
-</h1>
+<section class="todoapp">
+    <header class="header">
+        <h1>{{title}}</h1>    
+    </header>
+    <todo-input></todo-input>    
+</section>
+<section class="main">
+    <todo-list [status]="status" [term]="term"></todo-list>
+    <todo-footer (statusFilter)="status = $event"></todo-footer>
+</section>
+
+<footer class="info">
+    <p>Yet another Todo</p>
+</footer>
+
+<div>
+    Search:
+    <search-box (update)="term = $event"></search-box>
+</div>
+
+

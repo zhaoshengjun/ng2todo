@@ -1,0 +1,5 @@
+<div class="view">
+  <input id="toggle" type="checkbox" (click)="toggle.emit(todo)" [checked]="todo.status === 'completed' ">
+  <label [ngClass]="todo.status">{{todo.title}}</label>
+  <button class="destroy"></button>
+</div>

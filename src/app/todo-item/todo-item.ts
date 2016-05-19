@@ -1,17 +1,10 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
+  moduleId: module.id,
   selector: 'todo-item',
-  
-  template: `
-    <span [ngClass]="todo.status">{{todo.title}}</span>  
-    <button (click)="toggle.emit(todo)">Toggle</button>
-  `,
-  styles: [`
-    .completed{
-      text-decoration: line-through;
-    }
-  `]
+  templateUrl: 'todo-item.html',
+  styleUrls:['todo-item.css']
 })
 export class TodoItem {
   @Input() todo;

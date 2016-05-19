@@ -6,19 +6,12 @@ import { SearchPipe } from '../search-pipe/search-pipe';
 import { StartedPipe } from '../started-pipe/started-pipe';
 
 @Component({
+  moduleId: module.id,
   selector: 'todo-list',
   pipes:[SearchPipe,StartedPipe],
-  directives:[TodoItem],
-  template: `
-    <ul>
-      <li *ngFor="let todo of todoService.todos | search: term | started : status ">
-        <todo-item 
-          [todo]="todo" 
-          (toggle)="todoService.toggleTodo($event)">
-        </todo-item>
-      </li>      
-    </ul>
-  `
+  directives: [TodoItem],
+  templateUrl: 'todo-list.html',
+  styleUrls:['todo-list.css']
 })
 export class TodoList implements OnInit{
 

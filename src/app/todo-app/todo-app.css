@@ -1,3 +1,35 @@
 h1 {
-  color: red;
+  position: absolute;
+    top: -155px;
+    width: 100%;
+    font-size: 80px;
+    text-align: center;
+    color: rgba(175, 47, 47, 0.15);
+    text-rendering: optimizeLegibility;
+}
+.todoapp {
+    background: #fff;
+    margin: 130px 0 40px 0;
+    position: relative;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+.main {
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid #e6e6e6;
+}
+.footer {
+    color: #777;
+    padding: 10px 15px;
+    height: 20px;
+    text-align: center;
+    border-top: 1px solid #e6e6e6;
+}
+
+.info {
+    margin: 65px auto 0;
+    color: #bfbfbf;
+    font-size: 10px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    text-align: center;
 }

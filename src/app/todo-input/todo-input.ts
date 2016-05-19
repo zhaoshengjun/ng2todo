@@ -7,7 +7,7 @@ import { TodoModel } from '../todo-model/todo-model';
   selector: 'todo-input',
   template: `
   <form (submit)="onSubmit()">
-    <input type="text" [(ngModel)]="todoModel.title" class="new-todo">
+    <input type="text" [(ngModel)]="todoModel.title" class="new-todo" placeholder="What needs to be done?" autofocus="">
   </form>
   `,
   styleUrls:['todo-input.css']

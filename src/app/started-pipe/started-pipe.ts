@@ -6,8 +6,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 export class StartedPipe implements PipeTransform {
   transform(value: any, status): any {
-    // console.log(value,status);
-    
-    return value.filter((item) => item.status === status);
+    if (status === 'all') {
+      return value;
+    } else {
+      return value.filter((item) => item.status === status);
+    }
   }
 }

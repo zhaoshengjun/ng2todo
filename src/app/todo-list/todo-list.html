@@ -1,0 +1,6 @@
+<ul class="todo-list">
+  <li *ngFor="let todo of todoService.todos | search: term | started : status " [class.completed]="todo.status == 'completed'">
+    <todo-item [todo]="todo" (toggle)="todoService.toggleTodo($event)">
+    </todo-item>
+  </li>
+</ul>

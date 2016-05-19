@@ -3,20 +3,17 @@ import { Component, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'status-selector',
   template: `
-    <select #statusSel (change)="status.emit(statusSel.value)">
-      <option value="started">started</option>    
-      <option value="completed">completed</option>
-    </select>
+    <button (click)="status.emit('all')" class="clear-completed">all</button>
+    <button (click)="status.emit('started')" class="clear-completed">started</button>
+    <button (click)="status.emit('completed')" class="clear-completed">completed</button>
   `
 })
 export class StatusSelector {
   @Output() status = new EventEmitter();
 
   constructor() { }
-  
+
   ngOnInit() {
-    this.status.emit('started');
+    this.status.emit('all');
   }
-
-
 }
